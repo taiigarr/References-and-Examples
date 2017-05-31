@@ -1,0 +1,27 @@
+<!-- 
+Write a JavaScript program to display the current day and time in the following format. Go to the editor
+Sample Output : Today is : Friday. 
+Current time is : 4 PM : 50 : 22
+ -->
+<!doctype html>
+<html>
+<head>
+<title>DisplayDay</title>
+<script src = "moment.js"></script> 
+<!-- date and time lib for more convenient formatting; view how to use at https://momentjs.com/docs/#/displaying/ -->
+</head>
+<body>
+<script>
+
+function displayDay() {
+	document.write("Today is: " + moment().format("dddd"));
+	document.write("<br>");  
+	document.write("Current Time is: " +  moment().format("hA") + " : " +  moment().format("m") + " : " +  moment().format("s"));
+}
+displayDay();
+
+
+</script>
+</body>
+</html>
+

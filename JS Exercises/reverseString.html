@@ -1,0 +1,38 @@
+<!--
+Write a JavaScript function that takes a number from input and reverses it.
+-->
+<!DOCTYPE html>
+<html>
+<head><title> Reverse String</title>
+</head>
+
+<p>Reverse a String</p>
+
+ 
+ <input type="text" id="userInput"> </input>
+<button onclick="test()">Submit</button>
+
+<!-- add this line for function to write into -->
+<p id="demo"></p>   
+
+<script type="text/javascript">
+function test(){
+    var userInput = document.getElementById("userInput").value;
+	var revStr = reverse(userInput,"");
+	
+    document.getElementById("demo").innerHTML = revStr;
+}
+function reverse(input, acc){
+
+	if (input == "")
+	return acc;
+
+	else
+	return reverse(input.substr(1), input[0] + acc);
+
+}
+</script>
+
+
+</body>
+ </html>
